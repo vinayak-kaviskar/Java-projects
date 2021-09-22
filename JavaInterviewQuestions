@@ -1,0 +1,113 @@
+
+
+intruction
+projects
+core java
+:  
+	java 8 features
+	functional interface , anonymous class
+	hashmap internal working
+	String vs String new
+	why do we say string is immutable
+	Singlepattern vs singleton bean in spring
+	single design pattern applications, how to achieve it
+	how to make a class immutable
+	marker interface,  what is serializable interface
+	volatile keyword?
+	transient keyword
+	static variables do they get serialized?
+	why do we have to override hashcode and equals methods?
+	when to prefer arraylist, and when to prefer linked list?		
+	Is hashmap thread safe, why to use concurrent hashmap
+	what is composition in java
+		
+threading
+diff betn sleep and wait methods? yield method?
+diff between runnable and callable method.
+what is thread local class?
+throwing exception for inherited methods?
+		
+		
+Hibernate :
+first level caching
+
+	
+Spring boot
+	springboot vs Spring?
+	scope of beans
+	types of transaction propagations
+	what are components involved in a microservice based architecture?
+	few annotations in spring, and explain
+	what is the use of qualifiers for beans ?
+	
+	***
+	flow of a resp api. with anotations.
+	design patterns usage
+	hooks in springboot
+	
+	
+unit testing:
+mockito:  @InjectMocks vs @Mock
+			mocking vs spying
+	
+AWS 
+		resources you have dealt with in AWS?
+		
+Redis cache , how are u storing data
+
+
+		
+SQL 
+2md highest salary	
+		
+	
+	
+	
+SCOPES OF A BEAN
+singleton  single instance thoughout application
+prototype every type a new bean is requested.
+request  for every new request
+session   for a http session
+websocket for a websocket session.
+application:  for the life cycle of servlet context, The application scope creates the bean instance for the lifecycle of a ServletContext.
+This is similar to the singleton scope, but there is a very important difference with regards to the scope of the bean.
+When beans are application scoped, the same instance of the bean is shared across multiple servlet-based applications running in the same ServletContext, while singleton scoped beans are scoped to a single application context only.
+
+
+
+
+@Resource Anotation, its use?,  difference between this and @Autowired
+	 
+	 
+	 
+story to actual implementation
+Code reviews?
+Junit, code coverage, sonar qube,, spying vs mocking
+cicd tool? exposure?
+aws how is it deployed?
+Rest API design ?
+micro service architecture?
+
+
+
+what is front controlller?
+what is basic mvc flow?
+what is method injection
+what is difference between classs level lock and object lock?
+what is AwareInterface?
+can we add prototype bean in singleton bean?
+can we have mltiple annotation on same method like @getmapping, @postmapping, @putMapping
+what is Lock interface?
+what all attributes are used to specify a foreign key in any relationship like @oneToMany?
+
+
+
+
+
+
+
+
+
+
+
+
