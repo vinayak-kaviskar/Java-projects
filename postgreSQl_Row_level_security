@@ -1,0 +1,28 @@
+
+
+CREATE POLICY name ON table_name
+	[FOR {ALL/SELECT/INSERT/UPDATE/DELETE}]
+	[TO {role_name/PUBLIC/CURRENT_USER/SESSION_USER}]
+	[USING (using_expression)]
+	[WITH CHECK (check_expression)] 
+
+
+Polcicies are created per table
+ per command optionally
+ per role optionally
+USING only operate on rows where using expression is true, when expression is false rows are hidden.
+
+
+WITH CHECK used with insert and update 
+can insert if check_expression results to true.
+throws error if check_expression results to false.
+
+
+ALTER TABLE table_name ENABLE ROW LEVEL SECURITY
+
+Only table owners can create policies.
+Super users and users with BYPASSRLS flags will always by pass RLS
+Table owners by pass RLS bydefault, but this can be changed by command: 
+ALTER TABLE table_name ENABLE FORCE ROW LEVEL SECURITY
+
+Comand to go to super user : RESET ROLE.  this will make current_user and session_user to postgres
