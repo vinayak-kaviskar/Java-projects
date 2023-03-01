@@ -2,22 +2,22 @@ package array.numeric;
 
 public class MissingNumberInArray {
 
-    private static int[] mainArray = new int[99]; 
+    {
+
     public static void main(String[] args) {
-        
-        int sum = 0;
-        int expectedSum = 0;
-        for(int i =0,j = 0; i< 100; i++) {
-            
-            if( i != 77) {
-                mainArray[j] = i;
-                j++;
-                sum = sum + i;
-            }
-            expectedSum = expectedSum+ i;
+
+        int inputArray[] = {1, 3, 4, 5,6, 7,8,9,10};
+
+        int n = inputArray.length;
+// formula to find sum of n natural numbers in java
+        int sumOfNNaturalNumbers = ((n+1)*(n+2))/2;
+
+        int sumOfNumbersInArray = 0;
+        for(int  i=0; i<inputArray.length;i++){
+            sumOfNumbersInArray = sumOfNumbersInArray + inputArray[i];
         }
-        
-        System.out.println(expectedSum- sum);
+        System.out.println("missing number is:"+(sumOfNNaturalNumbers-sumOfNumbersInArray));
     }
-    
+
+}
 }
