@@ -1,0 +1,129 @@
+package com.vinayak.prac;
+
+public class Practice2 {
+
+	public static void main(String[] args) {
+
+		int a = 0;
+		int b = 0;
+		for (int z = 0; z < 5; z++) {
+			if ((++a > 2) && (++b > 2)) {
+				a++;
+			}
+		}
+		/*
+		 * Traversal: z,a,b 
+		 * 0,1,0 
+		 * 1,2,0
+		 * 2,3,1 
+		 * 3,4,2 
+		 * 4,6,3
+		 */
+		
+		System.out.println(a + "      " + b);
+		//OUTPUT:: 6      3
+		System.out.println("--------------snippet 1 ends-------------------");
+
+		int r, c;
+		for (r = 1; r <= 10; r++) {
+			for (c = 1; c <= 10 - r; c++) {
+
+				System.out.print(c + " ");
+			}
+			System.out.println("");
+		}
+ 
+		/*
+		 * r c
+		 * 1 1 
+		 * 1 2
+		 * 1 3
+		 * 
+		 * 1 10
+		 * 
+		 * 2 1
+		 * 
+		 * 9 1
+		 * 10 1
+		 * */
+		/* output
+		 * 
+			1 2 3 4 5 6 7 8 9 
+			1 2 3 4 5 6 7 8 
+			1 2 3 4 5 6 7 
+			1 2 3 4 5 6 
+			1 2 3 4 5 
+			1 2 3 4 
+			1 2 3 
+			1 2 
+			1 
+		 *  
+		 *  */
+		
+		
+		System.out.println("----------------snippet 2 ends--------------------");
+		int[] arr = { 1, 2, 3, 4 };
+		call_array(arr[0], arr);
+		System.out.println(arr[0] + "," + arr[1]);
+		//OUTPUT::: 1,6
+		
+		System.out.println("-----------------snippet 3 ends-------------------");
+		for(int i = 0; i < 3; i++) 
+		{ 
+			switch(i) 
+			{ 
+				case 0: break; 
+				case 1: System.out.print("one "); 
+				case 2: System.out.print("two "); 
+				case 3: System.out.print("three "); 
+			} 
+		} 
+		System.out.println("done");	
+		//OUTPUT:: one two three two three done
+		System.out.println("----------------snippet 4 ends--------------------");
+		
+		try 
+		{ 
+			int x = 0; 
+			int y = 5 / x; 
+		} 
+		catch (Exception e) 
+		{
+			System.out.println("Exception"); 
+		} 
+//		catch (ArithmeticException ae) // this exception block should be placed first
+//		{
+//			System.out.println(" Arithmetic Exception"); 
+//		} 
+		System.out.println("finished");	
+		
+		System.out.println("----------------snippet 5 ends--------------------");
+	}
+
+	
+	
+	public static void badMethod() {
+        // this method does not throw compilation error, only closes the app with Error Exception
+		throw new Error();
+	}
+
+	//System.out.println("----------------snippet 6 ends--------------------");
+	static void call_array(int i, int arr[]) {
+		arr[i] = 6;
+		i = 5;
+	}
+	
+//	public int aMethod()
+//	{
+//	  static  int i = 0;   /// declared static variable in non-static method is not allowed only final is allowed in the method
+//		i++;
+//		return i;
+//	}
+	
+	public static void throwit() 
+	{
+		// does not give any compilation error
+		throw new RuntimeException();
+	}
+
+}
