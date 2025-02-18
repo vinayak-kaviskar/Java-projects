@@ -19,7 +19,7 @@ core java
 	why do we have to override hashcode and equals methods?
 	when to prefer arraylist, and when to prefer linked list?		
 	Is hashmap thread safe, why to use concurrent hashmap
-	what is composition in java
+	what is composition and aggregation in java?
 		
 threading
 diff betn sleep and wait methods? yield method?
@@ -124,3 +124,10 @@ If hashcollision occurs and keys are not equal, then values are stored in the li
 If number of nodes is beyond 8 in the linked list the hashmap used Red-Black Tree to optimise the performance.
 Load factor is 0.75, default size is 16, if load factor is reached, the size is doubled and the values are re-indexed.
 
+Composition VS Aggregation
+Aggregation:
+Aggregation is a looser form of association. It represents a "has-a" relationship where the contained object can exist independently of the container object.
+In aggregation, the lifetime of the contained objects is not managed by the container object. The contained objects can exist outside the container and can be shared among multiple containers.
+Composition:
+Composition is a stronger form of aggregation where the lifetime of the contained objects is managed by the container object.
+In composition, the contained objects cannot exist without the container object, and their lifetime is tied to the lifetime of the container.
