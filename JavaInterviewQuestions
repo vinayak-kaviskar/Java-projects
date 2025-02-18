@@ -102,7 +102,12 @@ what all attributes are used to specify a foreign key in any relationship like @
 
 
 
-
+What are features of java 17. (https://stacktips.com/articles/java-17-interview-questions-and-answers)
+1. Sealed classes
+2. Pattern matching in switch case.
+3. Pattern matching in instance of operator.
+4. Use of Records as DTOs.
+5. Improved random generator interface with different algorithms.
 
 
 
