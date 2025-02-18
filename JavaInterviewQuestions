@@ -13,9 +13,9 @@ core java
 	single design pattern applications, how to achieve it
 	how to make a class immutable
 	marker interface,  what is serializable interface
-	volatile keyword?
-	transient keyword
-	static variables do they get serialized?
+	volatile keyword? used in multi threading, present in main memory and cached in thread local, but does not guarantee atomicity/threadsafe.
+	transient keyword ? cannot be serialized
+	static variables do they get serialized? NO
 	why do we have to override hashcode and equals methods?
 	when to prefer arraylist, and when to prefer linked list?		
 	Is hashmap thread safe, why to use concurrent hashmap
