@@ -131,3 +131,13 @@ In aggregation, the lifetime of the contained objects is not managed by the cont
 Composition:
 Composition is a stronger form of aggregation where the lifetime of the contained objects is managed by the container object.
 In composition, the contained objects cannot exist without the container object, and their lifetime is tied to the lifetime of the container.
+
+
+Sleep Vs Wait Method:
+Aspect				sleep()							wait()
+Belongs to		Thread class							Object class (every object has this method)
+Purpose			Pauses the current thread for a specified time.			Pauses the thread until another thread calls notify() or notifyAll().
+Thread Ownership	Does not release any locks.					Releases any locks the thread holds on the object.
+Usage Context		General purpose (e.g., introducing delays, rate limiting).	Synchronization (e.g., waiting for a condition to be met).
+Exception		Throws InterruptedException when interrupted.			Throws InterruptedException when interrupted.
+Return Control		Automatically resumes after the time period.			Resumes when notified by another thread (notify()/notifyAll()).
