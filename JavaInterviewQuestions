@@ -111,7 +111,11 @@ What are features of java 17. (https://stacktips.com/articles/java-17-interview-
 
 
 
-
+Steps to make Immutable class
+	Declare the class as final, so it cannot be extended.
+	Declare all fields as private and final, so they cannot be modified outside the constructor.
+	Do not provide any setter methods for the fields.
+	If any of the fields are mutable, return a copy of them instead of returning the original object.
 
 
 
