@@ -63,7 +63,7 @@ SQL
 	
 	
 	
-SCOPES OF A BEAN
+SCOPES OF A BEAN (6)
 singleton  single instance thoughout application
 prototype every type a new bean is requested.
 request  for every new request
@@ -170,3 +170,13 @@ OSCache: Lightweight and easy to use but not as feature-rich.
 Redis: Excellent for distributed caching and persistence, especially for cloud-based systems.
 Hazelcast: Great for large-scale, distributed caching in clustered environments.
 Caffeine: Caffeine is a high-performance in-memory caching library that provides a fast and efficient caching solution for Hibernate. It supports various features such as expiration policies, eviction policies, and asynchronous loading.
+
+
+Spring Transaction Propagation types
+Propagation Type		If Transaction Exists			If Transaction Does Not Exist
+REQUIRED			Join the current tx			Start a new tx
+REQUIRES_NEW			Suspend current tx, start a new one	Start a new tx
+SUPPORTS			Join current tx				Execute non-transactionally
+NOT_SUPPORTED			Suspend current tx			Execute non-transactionally
+NEVER				Throw exception				Execute non-transactionally
+MANDATORY			Join current tx				Throw exception
