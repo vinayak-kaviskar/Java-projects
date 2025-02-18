@@ -106,7 +106,7 @@ What are features of java 17. (https://stacktips.com/articles/java-17-interview-
 1. Sealed classes
 2. Pattern matching in switch case.
 3. Pattern matching in instance of operator.
-4. Use of Records as DTOs.
+4. Use of Records lightweight dtos :: https://javatechonline.com/record-in-java-with-examples/
 5. Improved random generator interface with different algorithms.
 
 
