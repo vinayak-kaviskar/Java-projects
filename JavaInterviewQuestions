@@ -169,3 +169,4 @@ Infinispan: Ideal for distributed and highly scalable caching needs.
 OSCache: Lightweight and easy to use but not as feature-rich.
 Redis: Excellent for distributed caching and persistence, especially for cloud-based systems.
 Hazelcast: Great for large-scale, distributed caching in clustered environments.
+Caffeine: Caffeine is a high-performance in-memory caching library that provides a fast and efficient caching solution for Hibernate. It supports various features such as expiration policies, eviction policies, and asynchronous loading.
