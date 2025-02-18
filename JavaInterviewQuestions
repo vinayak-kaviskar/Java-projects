@@ -141,3 +141,9 @@ Thread Ownership	Does not release any locks.					Releases any locks the thread h
 Usage Context		General purpose (e.g., introducing delays, rate limiting).	Synchronization (e.g., waiting for a condition to be met).
 Exception		Throws InterruptedException when interrupted.			Throws InterruptedException when interrupted.
 Return Control		Automatically resumes after the time period.			Resumes when notified by another thread (notify()/notifyAll()).
+
+
+Yeild Method in thread class
+The yield() method is a way to suggest to the thread scheduler that the current thread is willing to relinquish its CPU time and allow other threads to run. 
+However, it’s only a suggestion, and the scheduler may choose to ignore it. It is primarily used in cooperative multitasking systems where 
+threads voluntarily give up their CPU time.
