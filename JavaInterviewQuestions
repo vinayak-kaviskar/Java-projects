@@ -118,5 +118,9 @@ Steps to make Immutable class
 	If any of the fields are mutable, return a copy of them instead of returning the original object.
 
 
-
+Hashmap Working:
+Each bucket has a linked list of nodes.
+If hashcollision occurs and keys are not equal, then values are stored in the linkedlist which is at same index.
+If number of nodes is beyond 8 in the linked list the hashmap used Red-Black Tree to optimise the performance.
+Load factor is 0.75, default size is 16, if load factor is reached, the size is doubled and the values are re-indexed.
 
