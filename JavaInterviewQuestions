@@ -233,4 +233,8 @@ if (obj instanceof Car car) {
     // Use car object here without typecasting it.
 }
 As you can notice, it makes the code more concise but also enhances readability and reduces the possibility of errors, such as incorrect casting.
+
+Java 17 : Improved Random generators in Java 17
+The new Random Number Generators API in Java 17 introduced a new RandomGenerator interface as the top-level interface for random number generators. 
+It provides specialized interfaces like SplittableRandomGenerator, JumpableRandomGenerator, and LeapableRandomGenerator for different types of generators.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
