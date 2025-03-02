@@ -210,3 +210,22 @@ Ex: public sealed abstract class Vehicle permits Car, Truck, Motorcycle {.......
 How Sealed classes are different from final classes?
 	Final Classes in Java cannot be inherited at all. It can be used when a class should never be extended.
 	Sealed Classes can be inherited, but only by a predefined set of classes. It is used when you want to allow inheritance, but only for specific classes.
+
+Java 17 : InstanceOf Operator enhancement:
+How does the pattern matching for instanceof work in Java 17?
+Pattern Matching for instanceof in Java 17 enhances the instanceof operator and eliminates the need for type casting and checking.
+
+Traditional approach:
+
+if (obj instanceof Car) {
+    Car str = (Car) obj;
+    // Use car object here 
+}
+
+With pattern matching in java 17 ,for instanceof:
+
+if (obj instanceof Car car) {
+    // Use car object here without typecasting it.
+}
+As you can notice, it makes the code more concise but also enhances readability and reduces the possibility of errors, such as incorrect casting.
+
