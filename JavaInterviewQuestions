@@ -102,13 +102,6 @@ what all attributes are used to specify a foreign key in any relationship like @
 
 
 
-What are features of java 17. (https://stacktips.com/articles/java-17-interview-questions-and-answers)
-1. Sealed classes
-2. Pattern matching in switch case and returning values from switch case:: detailed version wise evolution of switch case: https://medium.com/@javatechie/the-evolution-of-switch-statement-from-java-7-to-java-17-4b5eee8d29b7  
-3. Pattern matching in instance of operator.
-4. Use of Records lightweight dtos :: https://javatechonline.com/record-in-java-with-examples/
-5. Improved random generator interface with different algorithms.
-6. Text Blocks: Initializing multi-line strings by using 3 double quotes, like we have in python.
 
 
 Steps to make Immutable class
@@ -180,6 +173,15 @@ SUPPORTS			Join current tx				Execute non-transactionally
 NOT_SUPPORTED			Suspend current tx			Execute non-transactionally
 NEVER				Throw exception				Execute non-transactionally
 MANDATORY			Join current tx				Throw exception
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What are features of java 17. (https://stacktips.com/articles/java-17-interview-questions-and-answers)
+1. Sealed classes
+2. Pattern matching in switch case and returning values from switch case:: detailed version wise evolution of switch case: https://medium.com/@javatechie/the-evolution-of-switch-statement-from-java-7-to-java-17-4b5eee8d29b7  
+3. Pattern matching in instance of operator.
+4. Use of Records lightweight dtos :: https://javatechonline.com/record-in-java-with-examples/
+5. Improved random generator interface with different algorithms.
+6. Text Blocks: Initializing multi-line strings by using 3 double quotes, like we have in python.
 
 Java 17 : Records
  What are the Records in Java?
@@ -228,4 +230,4 @@ if (obj instanceof Car car) {
     // Use car object here without typecasting it.
 }
 As you can notice, it makes the code more concise but also enhances readability and reduces the possibility of errors, such as incorrect casting.
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
