@@ -212,6 +212,9 @@ Ex: public sealed abstract class Vehicle permits Car, Truck, Motorcycle {.......
 How Sealed classes are different from final classes?
 	Final Classes in Java cannot be inherited at all. It can be used when a class should never be extended.
 	Sealed Classes can be inherited, but only by a predefined set of classes. It is used when you want to allow inheritance, but only for specific classes.
+8. Is it possible to use records with inheritance?
+A record declaration does not have an extends clause, so it is NOT possible to explicitly declare a direct superclass type, even a Record. However, a record can implement interfaces, so you can use them polymorphically.
+
 
 Java 17 : InstanceOf Operator enhancement:
 How does the pattern matching for instanceof work in Java 17?
