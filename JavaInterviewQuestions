@@ -95,7 +95,7 @@ what is basic mvc flow?
 what is method injection
 what is difference between classs level lock and object lock?
 what is AwareInterface?
-can we add prototype bean in singleton bean?
+can we add prototype bean in singleton bean?  Yes
 can we have mltiple annotation on same method like @getmapping, @postmapping, @putMapping
 what is Lock interface?
 what all attributes are used to specify a foreign key in any relationship like @oneToMany?
