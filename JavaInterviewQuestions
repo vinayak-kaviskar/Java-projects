@@ -203,3 +203,10 @@ public record Vehicle(String make, String model, int year) {
 }
 Records are ideal for creating simple data-carrier classes, such as DTOs (Data Transfer Objects), value objects in domain-driven design, tuples, and more. Records are serializable by default, provided that all their components are serializable.
 
+Java 17 : Sealed Class
+Sealed classes are a new language feature introduced in Java 17 as part of JEP 409. They provide a way to restrict the subclasses that can extend a class or implement an interface. This feature is useful to create more robust and maintainable code and to define a closed hierarchy of types.
+Sealed Classes allow you to specify a limited set of subclasses that can extend a given class or implement an interface.
+Ex: public sealed abstract class Vehicle permits Car, Truck, Motorcycle {........ 
+How Sealed classes are different from final classes?
+	Final Classes in Java cannot be inherited at all. It can be used when a class should never be extended.
+	Sealed Classes can be inherited, but only by a predefined set of classes. It is used when you want to allow inheritance, but only for specific classes.
