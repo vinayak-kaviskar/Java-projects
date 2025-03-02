@@ -180,3 +180,26 @@ SUPPORTS			Join current tx				Execute non-transactionally
 NOT_SUPPORTED			Suspend current tx			Execute non-transactionally
 NEVER				Throw exception				Execute non-transactionally
 MANDATORY			Join current tx				Throw exception
+
+Java 17 : Records
+ What are the Records in Java?
+Records is a new language feature introduced in Java 14 and finalised in Java 16. A record is a special type of class in Java that allows us to define classes that act as transparent carriers for immutable data. Records can be used to replace traditional POJOs, which are often verbose and require a lot of boilerplate code.
+This is how we can define the records
+public record Vehicle(String make, String model, int year) {}
+
+The fields of a record are implicitly final, which means that once a record instance is created, the data it contains cannot be changed.
+Records provide several built-in methods for common operations such as constructors, getters,equals(), hashCode(), and toString(). Like a regular class, methods inside the record can be extended to provide a custom implementation.
+Records allow you to define a Compact constructor which omits the parameter list, assuming the same parameters as the record components. Within this constructor, you can include validation or normalization logic for the fields.
+public record Vehicle(String make, String model, int year) {
+
+    // Compact constructor
+    public Vehicle {
+        if (year < 1886) { // The first car was made in 1886
+            throw new IllegalArgumentException("Invalid year");
+        }
+        make = make.trim();
+        model = model.trim();
+    }
+}
+Records are ideal for creating simple data-carrier classes, such as DTOs (Data Transfer Objects), value objects in domain-driven design, tuples, and more. Records are serializable by default, provided that all their components are serializable.
+
