@@ -6,7 +6,7 @@ core java
 :  
 	java 8 features
 	functional interface , anonymous class
-	hashmap internal working ::  uses binary after a certain threshold otherwise still used binary tree internally: https://www.nagarro.com/en/blog/post/24/performance-improvement-for-hashmap-in-java-8
+	hashmap internal working ::  uses binary tree after a certain threshold otherwise still uses linked list internally: https://www.nagarro.com/en/blog/post/24/performance-improvement-for-hashmap-in-java-8
 	String vs String new
 	why do we say string is immutable
 	Singlepattern vs singleton bean in spring
