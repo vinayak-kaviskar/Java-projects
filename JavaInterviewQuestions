@@ -108,7 +108,7 @@ What are features of java 17. (https://stacktips.com/articles/java-17-interview-
 3. Pattern matching in instance of operator.
 4. Use of Records lightweight dtos :: https://javatechonline.com/record-in-java-with-examples/
 5. Improved random generator interface with different algorithms.
-6. Initializing multi-line strings by using 3 double quotes, like we have in python.
+6. Text Blocks: Initializing multi-line strings by using 3 double quotes, like we have in python.
 
 
 Steps to make Immutable class
