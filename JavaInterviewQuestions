@@ -238,3 +238,5 @@ Java 17 : Improved Random generators in Java 17
 The new Random Number Generators API in Java 17 introduced a new RandomGenerator interface as the top-level interface for random number generators. 
 It provides specialized interfaces like SplittableRandomGenerator, JumpableRandomGenerator, and LeapableRandomGenerator for different types of generators.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Micro service architecture:
+2-phase commit pattern is a blocking pattern, instead use saga pattern which is async and also compensation calls if failure is observed at a point.
