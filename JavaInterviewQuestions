@@ -5,7 +5,7 @@ projects
 core java
 :  
 	java 8 features
-	functional interface , anonymous class
+	functional interface , anonymous class :: medium article link: https://medium.com/@nagarjun_nagesh/functional-interfaces-in-java-fe5ebf5bafed
 	hashmap internal working ::  uses binary tree after a certain threshold otherwise still uses linked list internally: https://www.nagarro.com/en/blog/post/24/performance-improvement-for-hashmap-in-java-8
 	String vs String new
 	why do we say string is immutable
@@ -240,3 +240,98 @@ It provides specialized interfaces like SplittableRandomGenerator, JumpableRando
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Micro service architecture:
 2-phase commit pattern is a blocking pattern, instead use saga pattern which is async and also compensation calls if failure is observed at a point.
+
+
+Java 8: Functional Interfaces
+
+2. Built-in Functional Interfaces in Java
+Java provides a set of built-in functional interfaces in the `java.util.function` package to cover a wide range of use cases. These functional interfaces are categorized into four main types based on the operation they perform: Consumer, Supplier, Function, and Predicate.
+
+A `Consumer` is a functional interface that represents an operation that takes a single input and performs some action on it. It does not return any value.
+@FunctionalInterface
+interface Consumer<T> {
+    void accept(T t);
+}
+import java.util.List;
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
+public class ConsumerExample {
+    public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
+        names.add("Alice");
+        names.add("Bob");
+        names.add("Charlie");
+
+        // Using a Consumer to print each element of the list
+        Consumer<String> printName = name -> System.out.println(name);
+        names.forEach(printName);
+    }
+}
+
+A `Supplier` is a functional interface that represents an operation that supplies (provides) a result. It does not take any input.
+
+@FunctionalInterface
+interface Supplier<T> {
+    T get();
+}
+`get()`: This abstract method returns a result of type `T`.
+
+Example: Using Supplier
+import java.util.function.Supplier;
+
+public class SupplierExample {
+    public static void main(String[] args) {
+        // Using a Supplier to generate a random number
+        Supplier<Double> randomNumberSupplier = () -> Math.random();
+        double randomNumber = randomNumberSupplier.get();
+        System.out.println("Random Number: " + randomNumber);
+    }
+}
+In this example, we create a `Supplier` called `randomNumberSupplier` that generates a random number using `Math.random()`.
+
+2.3. Function
+A `Function` is a functional interface that represents an operation that takes an input of type `T` and produces an output of type `R`.
+
+@FunctionalInterface
+interface Function<T, R> {
+    R apply(T t);
+}
+`apply(T t)`: This abstract method takes a parameter of type `T` and returns a result of type `R`.
+
+Example: Using Function
+import java.util.function.Function;
+
+public class FunctionExample {
+    public static void main(String[] args) {
+        // Using a Function to convert a string to its length
+        Function<String, Integer> stringLengthFunction = s -> s.length();
+        int length = stringLengthFunction.apply("Java is awesome!");
+        System.out.println("Length of the string: " + length);
+    }
+}
+In this example, we create a `Function` called `stringLengthFunction` that converts a string to its length using the `length()` method.
+
+2.4. Predicate
+A `Predicate` is a functional interface that represents an operation that takes an input of type `T` and returns a boolean result.
+
+@FunctionalInterface
+interface Predicate<T> {
+    boolean test(T t);
+}
+`test(T t)`: This abstract method takes a parameter of type `T` and returns a boolean result.
+
+Example: Using Predicate
+import java.util.function.Predicate;
+
+public class PredicateExample {
+    public static void main(String[] args) {
+        // Using a Predicate to check if a number is even
+        Predicate<Integer> isEvenPredicate = number -> number % 2 == 0;
+        boolean isEven = isEvenPredicate.test(10);
+        System.out.println("Is the number even? " + isEven);
+    }
+}
+In this example, we create a `Predicate` called `isEvenPredicate` that checks if a number is even using the condition `number % 2 == 0`.
+
+
